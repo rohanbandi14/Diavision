@@ -1,0 +1,10 @@
+.env
+**/.env
+node_modules/
+**/node_modules/
+__pycache__/
+*.pyc
+venv/
+build/
+diavision_backend/.env
+.env*

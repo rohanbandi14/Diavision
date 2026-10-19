@@ -1,0 +1,34 @@
+/* Cohort table: preview footer + full-window modal */
+.table-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 4px 0; color: var(--text-mid, #8b97ad);
+  font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px;
+}
+.cohort-modal-backdrop {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0, 0, 0, 0.78); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center; padding: 3vh 3vw;
+  animation: cm-fade .15s ease-out;
+}
+.cohort-modal {
+  width: min(1400px, 100%); max-height: 100%;
+  display: flex; flex-direction: column;
+  background: var(--void, #000); border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px; box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+.cohort-modal-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.cohort-modal-title { margin: 0; font-size: 18px; color: var(--text-hi, #fff); }
+.cohort-modal-sub {
+  margin-top: 2px; font-size: 12px; color: var(--text-mid, #8b97ad);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+.cohort-modal-actions { display: flex; gap: 10px; }
+.cohort-modal-body { overflow: auto; padding: 8px 24px 24px; }
+.cohort-modal-body thead th {
+  position: sticky; top: 0; z-index: 2; background: var(--void, #000);
+}
+@keyframes cm-fade { from { opacity: 0; } to { opacity: 1; } }
